@@ -33,11 +33,11 @@ function disconnect(): void{
 
 // To be used for paths that could be accessed via web
 function _resource(string $path): string{
-	return BASE_URL . $path;
+	return "/" . URI_NAME . "/" . $path;
 }
 
 function _url(string $path): string{
-	return _resource($path);
+	return BASE_URL . $path;
 }
 
 // Particular use case involves inclusions

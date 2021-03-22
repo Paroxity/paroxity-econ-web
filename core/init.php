@@ -17,4 +17,6 @@ error_reporting(1);
 
 define("NAME", "ParoxityEcon");
 define("URI_NAME", "pecon");
-define("BASE_URL", "http://localhost/" . strtolower(URI_NAME) . "/");
+define("DOMAIN", "http://6710eeb030f1.ngrok.io");
+//define("DOMAIN", "http://localhost");
+define("BASE_URL", DOMAIN . "/" . strtolower(URI_NAME) . "/");

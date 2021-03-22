@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feaf39ca-caf7-4e93-a0be-dea1a04f6d1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/connect/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/etc/flush.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Default_23_11_20_dup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Default_23_11_20_dup.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/classes/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/classes/DB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/functions/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/functions/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/functions/util_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/functions/util_functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disconnect/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/disconnect/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +56,7 @@
       <workItem from="1616416682940" duration="38000" />
       <workItem from="1616416746191" duration="449000" />
       <workItem from="1616423792880" duration="7967000" />
-      <workItem from="1616433451326" duration="6741000" />
+      <workItem from="1616433451326" duration="9738000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit&#10;far from complete...">
       <created>1616433486390</created>
@@ -76,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616433486390</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixes">
+      <created>1616440690753</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616440690753</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +81,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit&#10;far from complete..." />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit&#10;far from complete..." />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
 </project>
