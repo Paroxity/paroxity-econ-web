@@ -30,3 +30,17 @@ function disconnect(): void{
 	DB::DESTROY();
 	session_destroy();
 }
+
+// To be used for paths that could be accessed via web
+function _resource(string $path): string{
+	return BASE_URL . $path;
+}
+
+function _url(string $path): string{
+	return _resource($path);
+}
+
+// Particular use case involves inclusions
+function _path(string $path): string{
+	return APP_PATH . $path;
+}

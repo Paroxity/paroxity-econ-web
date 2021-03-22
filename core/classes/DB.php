@@ -16,8 +16,6 @@ class DB{
 			self::INIT();
 		}
 
-		$oldErrorLevel = error_reporting(0);
-
 		try {
 			_log("Testing connection...");
 			self::$pdo->query("SELECT 1");
@@ -26,8 +24,6 @@ class DB{
 			_log("Connection failed, reinitializing...");
 			self::INIT();
 		}
-
-		error_reporting($oldErrorLevel);
 
 		return self::$pdo;
 	}
@@ -56,6 +52,10 @@ class DB{
 
 	public static function DESTROY(){
 		self::$pdo = null;
+	}
+
+	public function getConn(): ?PDO{
+		return self::CONN();
 	}
 
 	/*
