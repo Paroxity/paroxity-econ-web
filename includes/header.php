@@ -28,7 +28,7 @@ if(isset($_POST["submit"])){
 			_go("connect");
 		}else{
 			unset($_SESSION["connected"]);
-			_alert("Unable to establish connection. Please try again.");
+			_err("Unable to establish connection. Please try again.");
 		}
 	}
 
@@ -60,9 +60,24 @@ if(isset($_POST["submit"])){
     <link rel="stylesheet" href="<?php echo _resource("assets/css/navbar.css"); ?>">
     <link rel="stylesheet" href="<?php echo _resource("assets/css/styles.css"); ?>">
     <link rel="stylesheet" href="<?php echo _resource("assets/css/table-custom.css"); ?>">
+    <link rel="stylesheet" href="<?php echo _resource("assets/css/extras.css"); ?>">
 </head>
 
 <body>
+
+<?php if(isset($_SESSION["error"])): ?>
+
+    <div id="alert-div" class="alert">
+        <span class="alert-close-btn" onclick="this.parentElement.style.display='none';">x</span>
+        <strong>Error: </strong> <?php echo $_SESSION["error"]; ?>
+    </div>
+
+    <script>
+        document.getElementById("alert-div").style.display = "inherit";
+    </script>
+
+<?php unset($_SESSION["error"]); endif; ?>
+
 <div id="header">
     <header>
         <div class="container-fluid" id="header-2">

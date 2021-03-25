@@ -26,6 +26,12 @@ function _log(string $msg): void{
 	echo '<script type = "text/javascript"> console.log("' . $msg . '") </script>';
 }
 
+// display error on top of the header
+function _err(string $err): void{
+	$_SESSION["error"] = $err;
+}
+
+// returns if the user is connected or not
 function isConnected(): bool{
 	return isset($_SESSION["connected"]);
 }
@@ -55,5 +61,11 @@ function _path(string $path): string{
 // head over to another page
 function _go(string $path): void{
 	header("Location: " . BASE_URL . $path);
+	exit();
+}
+
+// wait x seconds before redirecting
+function _redirect(string $path, int $sec = 5): void{
+	header("refresh: ${sec}; url= " . BASE_URL . $path);
 	exit();
 }

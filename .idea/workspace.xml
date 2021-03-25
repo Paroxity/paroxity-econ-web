@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="feaf39ca-caf7-4e93-a0be-dea1a04f6d1c" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/assets/css/extras.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/classes/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/classes/DB.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/functions/util_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/functions/util_functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/currency/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/currency/index.php" afterDir="false" />
@@ -69,7 +67,7 @@
       <workItem from="1616423792880" duration="7967000" />
       <workItem from="1616433451326" duration="10676000" />
       <workItem from="1616492145214" duration="699000" />
-      <workItem from="1616697248171" duration="10204000" />
+      <workItem from="1616697248171" duration="10555000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit&#10;far from complete...">
       <created>1616433486390</created>
@@ -113,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616700248888</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added comments">
+      <created>1616709983560</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616709983560</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +133,7 @@
     <MESSAGE value="cleanup, next up currency" />
     <MESSAGE value="added currency stuff, todo: backend" />
     <MESSAGE value="formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="formatting" />
+    <MESSAGE value="added comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comments" />
   </component>
 </project>
