@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feaf39ca-caf7-4e93-a0be-dea1a04f6d1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/css/fixed-div-scrolling.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/navbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/table-custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/paleta-sensores.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/table-custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/currency/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pecon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pecon.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/custom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/connect/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/connect/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/functions/util_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/functions/util_functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currency/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/currency/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +66,7 @@
       <workItem from="1616423792880" duration="7967000" />
       <workItem from="1616433451326" duration="10676000" />
       <workItem from="1616492145214" duration="699000" />
-      <workItem from="1616697248171" duration="2566000" />
+      <workItem from="1616697248171" duration="2895000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit&#10;far from complete...">
       <created>1616433486390</created>
@@ -102,17 +89,34 @@
       <option name="project" value="LOCAL" />
       <updated>1616444199518</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="cleanup, next up currency">
+      <created>1616700010075</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616700010075</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added currency stuff, todo: backend">
+      <created>1616700075245</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616700075245</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit&#10;far from complete..." />
     <MESSAGE value="fixes" />
     <MESSAGE value="more fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="more fixes" />
+    <MESSAGE value="cleanup, next up currency" />
+    <MESSAGE value="added currency stuff, todo: backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="added currency stuff, todo: backend" />
   </component>
 </project>

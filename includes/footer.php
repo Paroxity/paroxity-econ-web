@@ -17,17 +17,17 @@
 
 <?php if(isConnected()): ?>
 
-	<script>
+    <script>
         document.getElementById("connect-btn").style.display = "none";
         document.getElementById("disconnect-btn").style.display = "inherit";
-	</script>
+    </script>
 
 <?php else: ?>
 
-	<script>
+    <script>
         document.getElementById("connect-btn").style.display = "inherit";
         document.getElementById("disconnect-btn").style.display = "none";
-	</script>
+    </script>
 
 <?php endif; ?>
 

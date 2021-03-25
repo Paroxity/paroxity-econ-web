@@ -7,7 +7,7 @@ if(!defined("APP_PATH")){
 include APP_PATH . "includes/header.php";
 
 if(!isConnected() || !isset($_SESSION["redirect"])){
-    home();
+	home();
 
 	return;
 }

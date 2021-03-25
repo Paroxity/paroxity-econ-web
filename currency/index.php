@@ -63,6 +63,7 @@ if(!isConnected()){
         </div>
     </div>
 </div>
+
 <div class="custom-modal">
     <div class="modal fade" role="dialog" tabindex="-1" id="delete-confirm-modal">
         <div class="modal-dialog modal-dialog-centered" role="document">
