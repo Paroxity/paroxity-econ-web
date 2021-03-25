@@ -44,3 +44,8 @@ function _url(string $path): string{
 function _path(string $path): string{
 	return APP_PATH . $path;
 }
+
+function _go(string $path): void{
+	header("Location: " . BASE_URL . $path);
+	exit();
+}

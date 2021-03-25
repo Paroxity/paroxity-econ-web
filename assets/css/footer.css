@@ -1,0 +1,13 @@
+.footer-basic {
+  padding: 40px 0px;
+  bottom: 0;
+  background: rgb(26,26,29);
+}
+
+.footer-basic .copyright {
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0px;
+}
+

@@ -1,12 +1,17 @@
-<div class="footer-basic footer-edit" style="background: rgb(26,26,29);/*padding: 34px;*/">
-	<footer>
-		<p class="copyright">Paroxity © 2021</p>
-	</footer>
+<div id="footer" class="footer-basic">
+    <footer>
+        <p class="copyright">Paroxity © 2021</p>
+    </footer>
 </div>
+
 <script src="<?php echo _resource("assets/js/jquery.min.js"); ?>"></script>
 <script src="<?php echo _resource("assets/bootstrap/js/bootstrap.min.js"); ?>"></script>
 <script src="<?php echo _resource("assets/js/bs-init.js"); ?>"></script>
 <script src="<?php echo _resource("assets/js/custom.js"); ?>"></script>
+<script src="<?php echo _resource("assets/js/table-custom.js"); ?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/jquery.tablesorter.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-filter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-storage.min.js"></script>
 </body>
 </html>
 

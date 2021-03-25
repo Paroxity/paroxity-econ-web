@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $(window).scroll(function () {
+    /*
+	$(window).scroll(function () {
         if ($(document).scrollTop() > 0.1) {
             var parentwidth = $("nav").width();
             $("nav").addClass("scrolled").width(parentwidth);
@@ -8,6 +9,7 @@ $(document).ready(function () {
 			$("nav").removeAttr('style');
         }
     });
+	*/
 	
 	// setting div size to the window height automatically!
 	//$('.window-adjust').css('height', $(window).height() - 250);

@@ -1,5 +1,5 @@
 .navbar {
-  background-color: transparent;
+  background-color: #1A1A1D;
 }
 
 .scrolled {
@@ -8,7 +8,7 @@
   box-shadow: 0 0.5rem 1rem 0 rgba(44,51,73,.1);
 }
 
-header {
+#header {
   background: #1A1A1D;
 }
 
@@ -49,17 +49,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.footer-edit {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  width: 100%;
-}
-
-#connect-error {
-  /*display: none;*/
-}
-
 #disconnect-btn {
   display: none;
   background: rgb(0,61,128);
@@ -68,5 +57,9 @@ body {
 #connect-btn {
   background-color: #6F2232;
   display: inherit;
+}
+
+.custom-modal {
+  font-family: Blinker, sans-serif !important;
 }
 

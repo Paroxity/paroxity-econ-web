@@ -1,0 +1,33 @@
+#ipi-table > thead > tr, #ipi-table > thead > tr > td {
+  font-size: .9em;
+  font-weight: 400;
+}
+
+#ipi-table > tbody > tr > td {
+  max-height: 200px;
+  vertical-align: middle!important;
+}
+
+#ipi-table-cell {
+  vertical-align: middle;
+}
+
+#table-style {
+  background-color: #dcdcdc !important;
+  color: black;
+  font-family: Blinker, sans-serif !important;
+}
+
+.table-body {
+}
+
+#add-currency-btn {
+  background-color: #d32525;
+  border-color: #d32525;
+}
+
+.action-btn-edit {
+  background: rgb(11,171,56);
+  margin: 2px;
+}
+

@@ -1,0 +1,58 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+#header {
+  width: 100%;
+  position: absolute;
+}
+
+#footer {
+  width: 100%;
+  position: absolute;
+}
+
+#content {
+  height: 100%;
+  padding: 110px 0px;
+  overflow: hidden;
+}
+
+#content #scrollableContent {
+  height: 100%;
+  overflow: auto;
+}
+
+#content #scrollableContent #paddingContent {
+  padding: 0px;
+}
+
+/* Works on Firefox */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6f2232 #1a1a1d;
+}
+
+/* Works on Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1a1a1d;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #6f2232;
+  border-radius: 200px;
+  border: 3px solid transparent;
+}
+

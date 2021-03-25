@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feaf39ca-caf7-4e93-a0be-dea1a04f6d1c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/css/fixed-div-scrolling.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/table-custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/paleta-sensores.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/table-custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/currency/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pecon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pecon.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connect/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/connect/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/functions/util_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/functions/util_functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/init.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +30,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1q73DUcA8lJ4GtY1PsfkJDG4rvj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -30,7 +51,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../peco" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -56,7 +77,9 @@
       <workItem from="1616416682940" duration="38000" />
       <workItem from="1616416746191" duration="449000" />
       <workItem from="1616423792880" duration="7967000" />
-      <workItem from="1616433451326" duration="9738000" />
+      <workItem from="1616433451326" duration="10676000" />
+      <workItem from="1616492145214" duration="699000" />
+      <workItem from="1616697248171" duration="2566000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit&#10;far from complete...">
       <created>1616433486390</created>
@@ -72,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616440690753</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="more fixes">
+      <created>1616444199518</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616444199518</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +112,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit&#10;far from complete..." />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="more fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="more fixes" />
   </component>
 </project>
