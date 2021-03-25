@@ -88,8 +88,11 @@ class DB{
 		return $result !== false;
 	}
 
-	public function addCurrency(): void{
+	public function getCurrencies(): array{
 		$conn = $this->getConn();
-		$stmt = $conn->prepare("");
+		$stmt = $conn->prepare("SELECT * FROM currency");
+		$stmt->execute();
+
+		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 }

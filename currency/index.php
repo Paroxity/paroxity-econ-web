@@ -20,6 +20,8 @@ if(!db()->tableExists("currency")){
     return;
 }
 
+var_dump($_POST);
+
 ?>
 
 <div id="content">
@@ -50,6 +52,33 @@ if(!db()->tableExists("currency")){
                         </tr>
                         </thead>
                         <tbody class="text-center table-body" id="table-style">
+
+                        <?php
+
+                        foreach(db()->getCurrencies() as $currency):
+                            echo "<tr>";
+                            echo "<td>" . $currency["id"] . "</td>";
+	                        echo "<td>" . $currency["name"] . "</td>";
+	                        echo "<td>" . $currency["symbol"] . "</td>";
+	                        echo "<td>" . $currency["symbol_position"] . "</td>";
+	                        echo "<td>" . $currency["starting_amount"] . "</td>";
+	                        echo "<td>" . $currency["maximum_amount"] . "</td>";
+	                        echo "<td class='text-center'>";
+	                        ?>
+
+                            <form method="post">
+                                <button class="btn btn-success action-btn-edit" type="button" data-toggle="modal" data-target="#edit-currency-modal" name="action" value="edit"><i class="fas fa-pencil-alt"></i></button>
+                                <button class="btn btn-danger" type="button" style="margin: 2px;" data-target="#delete-confirm-modal" data-toggle="modal" name="action" value="delete"><i class="fas fa-trash"></i></button>
+                                <input type="hidden" class="form-control" name="currency_id" value="<?php echo $currency["id"]; ?>" />
+                            </form>
+
+                            <?php
+
+	                        echo "</td></tr>";
+	                        endforeach;
+                        ?>
+
+                        <!--
                         <tr>
                             <td>coins</td>
                             <td>Coins</td>
@@ -57,8 +86,22 @@ if(!db()->tableExists("currency")){
                             <td>end</td>
                             <td>0</td>
                             <td>1000000</td>
-                            <td class="text-center"><a class="btn btn-success action-btn-edit" role="button" data-toggle="modal" data-target="#edit-currency-modal"><i class="fas fa-pencil-alt"></i></a><a class="btn btn-danger" role="button" style="margin: 2px;" data-target="#delete-confirm-modal" data-toggle="modal"><i class="fas fa-trash"></i></a></td>
+
+
+                            <td class="text-center">
+                                <button class="btn btn-success action-btn-edit" type="button" data-toggle="modal" data-target="#edit-currency-modal"><i class="fas fa-pencil-alt"></i></button>
+                                <button class="btn btn-danger" type="button" style="margin: 2px;" data-target="#delete-confirm-modal" data-toggle="modal"><i class="fas fa-trash"></i></button>
+                            </td>
+
+
+                            <form method="post">
+                                <button class="btn btn-success action-btn-edit" type="button" data-toggle="modal" data-target="#edit-currency-modal" name="action" value="delete"><i class="fas fa-pencil-alt"></i></button>
+                                <button class="btn btn-danger" type="button" style="margin: 2px;" data-target="#delete-confirm-modal" data-toggle="modal" name="action" value="delete"><i class="fas fa-trash"></i></button>
+                                <input type="hidden" class="form-control" name="currency_id" value="currency" />
+                            </form>
+
                         </tr>
+                        -->
                         </tbody>
                     </table>
                 </div>
@@ -66,6 +109,7 @@ if(!db()->tableExists("currency")){
         </div>
     </div>
 </div>
+
 <div class="custom-modal">
     <div class="modal fade" role="dialog" tabindex="-1" id="delete-confirm-modal">
         <div class="modal-dialog modal-dialog-centered" role="document">
