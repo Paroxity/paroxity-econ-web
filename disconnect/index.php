@@ -7,10 +7,10 @@ if(!defined("APP_PATH")){
 include APP_PATH . "core/init.php";
 
 if(!isConnected()){
-	home();
+	_home();
 
 	return;
 }
 
-disconnect();
-home();
+_disconnect();
+_home();

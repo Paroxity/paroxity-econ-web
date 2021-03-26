@@ -104,4 +104,17 @@ class DB{
 
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
+
+	public function editCurrency(array $data): bool{
+		$conn = $this->getConn();
+		$stmt = $conn->prepare("UPDATE currency SET name = :name, symbol = :symbol, symbol_position = :sym_pos, starting_amount = :st_amt, maximum_amount = :max_amt WHERE id = :id");
+		$stmt->bindParam(":id", $data["id"]);
+		$stmt->bindParam(":name", $data["name"]);
+		$stmt->bindParam(":symbol", $data["symbol"]);
+		$stmt->bindParam(":sym_pos", $data["symbol_position"]);
+		$stmt->bindParam(":st_amt", $data["starting_amount"]);
+		$stmt->bindParam(":max_amt", $data["maximum_amount"]);
+
+		return $stmt->execute();
+	}
 }

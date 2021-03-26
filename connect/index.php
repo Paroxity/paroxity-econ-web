@@ -7,9 +7,21 @@ if(!defined("APP_PATH")){
 include APP_PATH . "includes/header.php";
 
 if(!isConnected() || !isset($_SESSION["redirect"])){
-	home();
+	_home();
 
 	return;
+}
+
+if(isset($_SESSION["temp-msg"])){
+    if(isset($_SESSION["temp-msg"]["success"])){
+	    _success($_SESSION["temp-msg"]["success"]);
+	    unset($_SESSION["temp-msg"]["success"]);
+    }
+
+	if(isset($_SESSION["temp-msg"]["error"])){
+		_error($_SESSION["temp-msg"]["error"]);
+		unset($_SESSION["temp-msg"]["error"]);
+	}
 }
 
 _go($_SESSION["redirect"]);

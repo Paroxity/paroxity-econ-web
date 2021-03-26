@@ -25,10 +25,11 @@ if(isset($_POST["submit"])){
 
 			$_SESSION["redirect"] = "currency"; // we only deal with currency changes for now
 
+            _temp_success_msg("Connection established successfully.");
 			_go("connect");
 		}else{
 			unset($_SESSION["connected"]);
-			_err("Unable to establish connection. Please try again.");
+			_error("Unable to establish connection. Please try again.");
 		}
 	}
 
@@ -65,18 +66,31 @@ if(isset($_POST["submit"])){
 
 <body>
 
-<?php if(isset($_SESSION["error"])): ?>
+<?php if(isset($_SESSION["alert-error"])): ?>
 
-    <div id="alert-div" class="alert">
+    <div id="alert-error-div" class="alert-error">
         <span class="alert-close-btn" onclick="this.parentElement.style.display='none';">x</span>
-        <strong>Error: </strong> <?php echo $_SESSION["error"]; ?>
+        <strong>Error: </strong> <?php echo $_SESSION["alert-error"]; ?>
     </div>
 
     <script>
-        document.getElementById("alert-div").style.display = "inherit";
+        document.getElementById("alert-error-div").style.display = "inherit";
     </script>
 
-<?php unset($_SESSION["error"]); endif; ?>
+<?php unset($_SESSION["alert-error"]); endif; ?>
+
+<?php if(isset($_SESSION["alert-success"])): ?>
+
+    <div id="alert-success-div" class="alert-success">
+        <span class="alert-close-btn" onclick="this.parentElement.style.display='none';">x</span>
+        <strong>Success: </strong> <?php echo $_SESSION["alert-success"]; ?>
+    </div>
+
+    <script>
+        document.getElementById("alert-success-div").style.display = "inherit";
+    </script>
+
+<?php unset($_SESSION["alert-success"]); endif; ?>
 
 <div id="header">
     <header>

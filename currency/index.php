@@ -7,15 +7,38 @@ if(!defined("APP_PATH")){
 include APP_PATH . "includes/header.php";
 
 if(!isConnected()){
-	home();
+	_home();
 
 	return;
 }
 
 if(!db()->tableExists("currency")){
-	_err("'currency' table not found in the database. Please first run the plugin and then use this site.");
-	disconnect(false);
-	home();
+	_error("'currency' table not found in the database. Please first run the plugin and then use this site.");
+	_disconnect(false);
+	_home();
+
+	return;
+}
+
+if(isset($_POST["edit_currency"])){
+    if(!db()->editCurrency($_POST)){
+	    _error("Unable to edit the currency.");
+	    _disconnect(false);
+	    _home();
+    }else{
+        _success("Currency edited successfully!");
+
+        ?>
+
+        <script>
+            clear_currency_modal();
+        </script>
+
+        <?php
+
+	    unset($_POST);
+	    _go("currency");
+    }
 
 	return;
 }
@@ -33,7 +56,7 @@ if(!db()->tableExists("currency")){
                                 <h3 class="text-left content-title" style="color: rgb(195, 7, 63);">Currencies</h3>
                             </div>
                             <div class="col-12 col-sm-7 col-md-6 text-right" style="padding-right: 0px;padding-left: 0px;">
-                                <button class="btn btn-primary btn-sm" id="add-currency-btn" type="button" style="margin: 2px;" data-toggle="modal" data-target="#currency-modal">Add Currency</button>
+                                <button class="btn btn-primary btn-sm" id="add-currency-btn" type="button" style="margin: 2px;" data-toggle="modal" data-target="#currency-modal" onclick="add_currency_btn();">Add Currency</button>
                                 <button class="btn btn-warning btn-sm" id="zoom_in" type="button" zoomclick="ChangeZoomLevel(-10);" style="margin: 2px;"><i class="fa fa-search-plus"></i></button>
                                 <button class="btn btn-warning btn-sm" id="zoom_out" type="button" zoomclick="ChangeZoomLevel(-10);" style="margin: 2px;"><i class="fa fa-search-minus"></i></button>
                             </div>
@@ -151,7 +174,7 @@ if(!db()->tableExists("currency")){
                             </select></div>
                         <hr style="background: var(--light);"/>
                         <div class="form-group text-right">
-                            <button class="btn btn-outline-dark btn-lg text-white" style="width: 100%;" type="submit" name="currency_add">Connect</button>
+                            <button class="btn btn-outline-dark btn-lg text-white" style="width: 100%;" type="submit" id="currency-modal-submit-btn">Submit</button>
                         </div>
                     </form>
                 </div>

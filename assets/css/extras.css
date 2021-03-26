@@ -1,6 +1,13 @@
-.alert {
+.alert-error {
   padding: 20px;
   background-color: #f44336;
+  color: white;
+  display: none;
+}
+
+.alert-success {
+  padding: 20px;
+  background-color: #29a244;
   color: white;
   display: none;
 }

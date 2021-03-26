@@ -10,8 +10,13 @@ function stripInput($str): string{
 	return $str;
 }
 
+// returns if the user is connected or not
+function isConnected(): bool{
+	return isset($_SESSION["connected"]);
+}
+
 // proceed to the home page of the website
-function home(): void{
+function _home(): void{
 	header("Location: " . BASE_URL);
 	exit();
 }
@@ -27,17 +32,25 @@ function _log($msg): void{
 }
 
 // display error on top of the header
-function _err(string $err): void{
-	$_SESSION["error"] = $err;
+function _error(string $err): void{
+	$_SESSION["alert-error"] = $err;
 }
 
-// returns if the user is connected or not
-function isConnected(): bool{
-	return isset($_SESSION["connected"]);
+// display success message on top of the header
+function _success(string $msg): void{
+	$_SESSION["alert-success"] = $msg;
+}
+
+function _temp_success_msg(string $msg): void{
+	$_SESSION["temp-msg"]["success"] = $msg;
+}
+
+function _temp_error_msg(string $err): void{
+	$_SESSION["temp-msg"]["error"] = $err;
 }
 
 // disconnect the user from the db and destroy the session if needed
-function disconnect(bool $destroySession = true): void{
+function _disconnect(bool $destroySession = true): void{
 	DB::DESTROY();
 	unset($_SESSION["connected"]);
 	if($destroySession) session_destroy();
