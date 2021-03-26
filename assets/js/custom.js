@@ -18,3 +18,17 @@ $(document).ready(function () {
 $(window).resize(function(){
 	//$('.window-adjust').css('height', $(window).height() - 250);
 });
+
+function button_click(btn){
+    $.ajax({
+        type : "POST",
+        url  : window.location.href,
+        data : {
+            currency_id : btn.value
+        },
+        success: function(res){
+            $("#custom-modal").append(res); //TODO: figure this shit
+        }
+    });
+
+}

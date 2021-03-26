@@ -22,7 +22,7 @@ function _alert(string $msg): void{
 }
 
 // log stuff to console
-function _log(string $msg): void{
+function _log($msg): void{
 	echo '<script type = "text/javascript"> console.log("' . $msg . '") </script>';
 }
 

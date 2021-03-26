@@ -76,7 +76,7 @@ class DB{
 	}
 	*/
 
-	function tableExists(string $table): bool{
+	public function tableExists(string $table): bool{
 		$conn = $this->getConn();
 
 		try {
@@ -91,6 +91,15 @@ class DB{
 	public function getCurrencies(): array{
 		$conn = $this->getConn();
 		$stmt = $conn->prepare("SELECT * FROM currency");
+		$stmt->execute();
+
+		return $stmt->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	public function getCurrency(string $currencyId): array{
+		$conn = $this->getConn();
+		$stmt = $conn->prepare("SELECT * FROM currency WHERE id = :id");
+		$stmt->bindParam(":id", $currencyId);
 		$stmt->execute();
 
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
