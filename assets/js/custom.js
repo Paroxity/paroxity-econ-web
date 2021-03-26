@@ -1,4 +1,3 @@
-// put the data in the modal form
 function edit_or_delete_btn(btn, arr) {
 
     if (btn.name === "edit") {
@@ -34,7 +33,6 @@ function edit_or_delete_btn(btn, arr) {
     });
     */
 }
-
 
 function add_currency_btn() {
     var title = document.getElementById("currency-modal-title");

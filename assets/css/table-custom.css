@@ -22,12 +22,11 @@
 }
 
 #add-currency-btn {
-  background-color: #d32525;
-  border-color: #d32525;
+  /*background-color: #d32525;*/
+  /*border-color: #d32525;*/
 }
 
 .action-btn-edit {
   background: rgb(11,171,56);
   margin: 2px;
 }
-

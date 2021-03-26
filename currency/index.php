@@ -33,8 +33,7 @@ if(!db()->tableExists("currency")){
                                 <h3 class="text-left content-title" style="color: rgb(195, 7, 63);">Currencies</h3>
                             </div>
                             <div class="col-12 col-sm-7 col-md-6 text-right" style="padding-right: 0px;padding-left: 0px;">
-                                <button class="btn btn-danger btn-sm" id="add-currency-btn" type="button" style="margin: 2px;" data-toggle="modal" data-target="#currency-modal" onclick="add_currency_btn()">Add Currency</button>
-                                <button class="btn btn-primary btn-sm reset" type="button" style="margin: 2px;">Remove Filters</button>
+                                <button class="btn btn-primary btn-sm" id="add-currency-btn" type="button" style="margin: 2px;" data-toggle="modal" data-target="#currency-modal">Add Currency</button>
                                 <button class="btn btn-warning btn-sm" id="zoom_in" type="button" zoomclick="ChangeZoomLevel(-10);" style="margin: 2px;"><i class="fa fa-search-plus"></i></button>
                                 <button class="btn btn-warning btn-sm" id="zoom_out" type="button" zoomclick="ChangeZoomLevel(-10);" style="margin: 2px;"><i class="fa fa-search-minus"></i></button>
                             </div>
@@ -95,7 +94,8 @@ if(!db()->tableExists("currency")){
                 <div class="modal-body border-0" style="background: #1a1a1d;">
                     <p style="color: rgb(255,255,255);">Are you sure you want to delete this currency?&nbsp;<br>Deleting the currency will also delete any references to this currency as well.<br><br><strong>WARNING:</strong>&nbsp;This action is irreversible!</p>
                 </div>
-                <div class="modal-footer" style="background: #1a1a1d;"><a class="btn btn-light" role="button" id="currency-delete-confirm-btn" data-dismiss="modal" href="#" name="currency-delete-confirm">Confirm</a>
+                <div class="modal-footer" style="background: #1a1a1d;">
+                    <a class="btn btn-light" role="button" id="currency-delete-confirm-btn" data-dismiss="modal" href="#" name="currency-delete-confirm">Confirm</a>
                     <button class="btn btn-warning" type="button" data-dismiss="modal">Cancel</button>
                 </div>
             </div>
