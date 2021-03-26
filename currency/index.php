@@ -23,8 +23,8 @@ if(!db()->tableExists("currency")){
 if(isset($_POST["edit_currency"])){
     if(!db()->editCurrency($_POST)){
 	    _error("Unable to edit the currency.");
-	    _disconnect(false);
-	    _home();
+	    unset($_POST);
+	    _go("currency");
     }else{
         _success("Currency edited successfully!");
 
@@ -39,6 +39,39 @@ if(isset($_POST["edit_currency"])){
 	    unset($_POST);
 	    _go("currency");
     }
+
+	return;
+}
+
+if(isset($_POST["add_currency"])){
+    $id = $_POST["id"];
+
+    if(db()->currencyExists($id)){
+	    _error("Currency with ID: '${id}' already exists. Please choose a different ID.");
+	    unset($_POST);
+	    _go("currency");
+
+	    return;
+    }
+
+	if(!db()->addCurrency($_POST)){
+		_error("Unable to add the currency.");
+		unset($_POST);
+		_go("currency");
+	}else{
+		_success("Currency added successfully!");
+
+		?>
+
+        <script>
+            clear_currency_modal();
+        </script>
+
+		<?php
+
+		unset($_POST);
+		_go("currency");
+	}
 
 	return;
 }

@@ -58,24 +58,6 @@ class DB{
 		return self::CONN();
 	}
 
-	/*
-	public function emailExists(string $email): bool{
-		$stmt = $this->pdo->prepare("SELECT email FROM users WHERE email = :email");
-		$stmt->bindParam(":email", $email);
-		$stmt->execute();
-
-		return $stmt->rowCount() > 0;
-	}
-
-	public function usernameExists(string $username): bool{
-		$stmt = $this->pdo->prepare("SELECT username FROM users WHERE username = :username");
-		$stmt->bindParam(":username", $username);
-		$stmt->execute();
-
-		return $stmt->rowCount() > 0;
-	}
-	*/
-
 	public function tableExists(string $table): bool{
 		$conn = $this->getConn();
 
@@ -86,6 +68,15 @@ class DB{
 		}
 
 		return $result !== false;
+	}
+
+	public function currencyExists(string $currencyId): bool{
+		$conn = $this->getConn();
+		$stmt = $conn->prepare("SELECT name FROM currency WHERE id = :id");
+		$stmt->bindParam(":id", $currencyId);
+		$stmt->execute();
+
+		return $stmt->rowCount() > 0;
 	}
 
 	public function getCurrencies(): array{
@@ -108,6 +99,20 @@ class DB{
 	public function editCurrency(array $data): bool{
 		$conn = $this->getConn();
 		$stmt = $conn->prepare("UPDATE currency SET name = :name, symbol = :symbol, symbol_position = :sym_pos, starting_amount = :st_amt, maximum_amount = :max_amt WHERE id = :id");
+		$stmt->bindParam(":id", $data["id"]);
+		$stmt->bindParam(":name", $data["name"]);
+		$stmt->bindParam(":symbol", $data["symbol"]);
+		$stmt->bindParam(":sym_pos", $data["symbol_position"]);
+		$stmt->bindParam(":st_amt", $data["starting_amount"]);
+		$stmt->bindParam(":max_amt", $data["maximum_amount"]);
+
+		return $stmt->execute();
+	}
+
+	// check if the currency exists before adding
+	public function addCurrency(array $data): bool{
+		$conn = $this->getConn();
+		$stmt = $conn->prepare("INSERT INTO currency (id, name, symbol, symbol_position, starting_amount, maximum_amount) VALUES (:id, :name, :symbol, :sym_pos, :st_amt, :max_amt)");
 		$stmt->bindParam(":id", $data["id"]);
 		$stmt->bindParam(":name", $data["name"]);
 		$stmt->bindParam(":symbol", $data["symbol"]);

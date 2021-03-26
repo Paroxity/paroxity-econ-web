@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="feaf39ca-caf7-4e93-a0be-dea1a04f6d1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/extras.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/extras.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connect/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/connect/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/classes/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/classes/DB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/functions/util_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/functions/util_functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/currency/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/currency/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disconnect/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/disconnect/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/post.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +70,7 @@
       <workItem from="1616711862334" duration="507000" />
       <workItem from="1616712406395" duration="10000" />
       <workItem from="1616712448732" duration="9235000" />
-      <workItem from="1616745072649" duration="15898000" />
+      <workItem from="1616745072649" duration="16951000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit&#10;far from complete...">
       <created>1616433486390</created>
@@ -162,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616754691521</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="currency editing now works flawlessly">
+      <created>1616764571092</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1616764571092</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +184,7 @@
     <MESSAGE value="currency now displays properly.." />
     <MESSAGE value="form is now filled properly when edit button is clicked" />
     <MESSAGE value="remove filters button isnt needed" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove filters button isnt needed" />
+    <MESSAGE value="currency editing now works flawlessly" />
+    <option name="LAST_COMMIT_MESSAGE" value="currency editing now works flawlessly" />
   </component>
 </project>
