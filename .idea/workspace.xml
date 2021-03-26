@@ -70,7 +70,7 @@
       <workItem from="1616711862334" duration="507000" />
       <workItem from="1616712406395" duration="10000" />
       <workItem from="1616712448732" duration="9235000" />
-      <workItem from="1616745072649" duration="16951000" />
+      <workItem from="1616745072649" duration="18748000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit&#10;far from complete...">
       <created>1616433486390</created>
@@ -163,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616764571092</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="currency can now be added">
+      <created>1616765712485</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1616765712485</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +192,7 @@
     <MESSAGE value="form is now filled properly when edit button is clicked" />
     <MESSAGE value="remove filters button isnt needed" />
     <MESSAGE value="currency editing now works flawlessly" />
-    <option name="LAST_COMMIT_MESSAGE" value="currency editing now works flawlessly" />
+    <MESSAGE value="currency can now be added" />
+    <option name="LAST_COMMIT_MESSAGE" value="currency can now be added" />
   </component>
 </project>

@@ -31,11 +31,9 @@ function edit_or_delete_btn(btn, arr) {
         document.getElementById("currency-modal-submit-btn").setAttribute("name", "edit_currency");
     }
 
-    /*
-    $.post("post.php", {currency: arr}, function (data){
-       console.log(data);
-    });
-    */
+    if (btn.name === "delete") {
+        document.getElementById("currency-delete-input").value = arr.id;
+    }
 }
 
 function add_currency_btn() {

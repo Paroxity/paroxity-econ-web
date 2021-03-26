@@ -122,4 +122,12 @@ class DB{
 
 		return $stmt->execute();
 	}
+
+	public function deleteCurrency(string $currencyId): bool{
+		$conn = $this->getConn();
+		$stmt = $conn->prepare("DELETE FROM currency WHERE id = :id");
+		$stmt->bindParam(":id", $currencyId);
+
+		return $stmt->execute();
+	}
 }

@@ -23,8 +23,6 @@ if(!db()->tableExists("currency")){
 if(isset($_POST["edit_currency"])){
     if(!db()->editCurrency($_POST)){
 	    _error("Unable to edit the currency.");
-	    unset($_POST);
-	    _go("currency");
     }else{
         _success("Currency edited successfully!");
 
@@ -35,10 +33,10 @@ if(isset($_POST["edit_currency"])){
         </script>
 
         <?php
-
-	    unset($_POST);
-	    _go("currency");
     }
+
+	unset($_POST);
+	_go("currency");
 
 	return;
 }
@@ -56,8 +54,6 @@ if(isset($_POST["add_currency"])){
 
 	if(!db()->addCurrency($_POST)){
 		_error("Unable to add the currency.");
-		unset($_POST);
-		_go("currency");
 	}else{
 		_success("Currency added successfully!");
 
@@ -68,10 +64,25 @@ if(isset($_POST["add_currency"])){
         </script>
 
 		<?php
-
-		unset($_POST);
-		_go("currency");
 	}
+
+	unset($_POST);
+	_go("currency");
+
+	return;
+}
+
+if(isset($_POST["currency_delete_confirm"])){
+	$id = $_POST["currency_id"];
+
+	if(!db()->deleteCurrency($id)){
+		_error("Unable to delete the currency.");
+	}else{
+		_success("Currency deleted successfully!");
+	}
+
+	unset($_POST);
+	_go("currency");
 
 	return;
 }
@@ -140,19 +151,21 @@ if(isset($_POST["add_currency"])){
 </div>
 
 <div id="custom-modal" class="custom-modal">
-    <div class="modal fade" role="dialog" tabindex="-1" id="delete-confirm-modal">
+    <div role="dialog" tabindex="-1" class="modal fade" id="delete-confirm-modal">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content" style="background-color: #1A1A1D;">
                 <div class="modal-header" style="background: #1a1a1d;border-color: #ffffff;">
-                    <h4 class="modal-title" style="color: rgb(255,255,255);">Confirm Currency Delete</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white;"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" style="color: rgb(255,255,255);">Confirm Currency Delete</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white;"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body border-0" style="background: #1a1a1d;">
-                    <p style="color: rgb(255,255,255);">Are you sure you want to delete this currency?&nbsp;<br>Deleting the currency will also delete any references to this currency as well.<br><br><strong>WARNING:</strong>&nbsp;This action is irreversible!</p>
+                    <p style="color: rgb(255,255,255);">Are you sure you want to delete this currency? <br />Deleting the currency will also delete any references to this currency as well.<br /><br /><strong>WARNING:</strong> This action is irreversible!</p>
                 </div>
                 <div class="modal-footer" style="background: #1a1a1d;">
-                    <a class="btn btn-light" role="button" id="currency-delete-confirm-btn" data-dismiss="modal" href="#" name="currency-delete-confirm">Confirm</a>
-                    <button class="btn btn-warning" type="button" data-dismiss="modal">Cancel</button>
+                    <form id="currency-delete-confirm-form" method="POST" name="currency-delete-confirm" action="index.php">
+                        <input type="hidden" class="form-control" id="currency-delete-input" name="currency_id" />
+                        <button class="btn btn-light" id="currency-delete-confirm-btn" type="submit" name="currency_delete_confirm" style="margin-right: 3px;">Confirm</button>
+                        <button class="btn btn-warning" type="button" data-dismiss="modal" style="margin-left: 3px;">Cancel</button>
+                    </form>
                 </div>
             </div>
         </div>
