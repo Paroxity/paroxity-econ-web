@@ -33,7 +33,7 @@ if(!db()->tableExists("currency")){
                                 <h3 class="text-left content-title" style="color: rgb(195, 7, 63);">Currencies</h3>
                             </div>
                             <div class="col-12 col-sm-7 col-md-6 text-right" style="padding-right: 0px;padding-left: 0px;">
-                                <button class="btn btn-danger btn-sm" id="add-currency-btn" type="button" style="margin: 2px;" data-toggle="modal" data-target="#add-currency-modal">Add Currency</button>
+                                <button class="btn btn-danger btn-sm" id="add-currency-btn" type="button" style="margin: 2px;" data-toggle="modal" data-target="#currency-modal" onclick="add_currency_btn()">Add Currency</button>
                                 <button class="btn btn-primary btn-sm reset" type="button" style="margin: 2px;">Remove Filters</button>
                                 <button class="btn btn-warning btn-sm" id="zoom_in" type="button" zoomclick="ChangeZoomLevel(-10);" style="margin: 2px;"><i class="fa fa-search-plus"></i></button>
                                 <button class="btn btn-warning btn-sm" id="zoom_out" type="button" zoomclick="ChangeZoomLevel(-10);" style="margin: 2px;"><i class="fa fa-search-minus"></i></button>
@@ -68,8 +68,8 @@ if(!db()->tableExists("currency")){
 							echo "<td class='text-center'>";
 							?>
 
-                            <button class="btn btn-success action-btn-edit" type="button" data-toggle="modal" data-target="#edit-currency-modal" name="edit" value="<?php echo $currency["id"]; ?>" onclick="button_click(this);"><i class="fas fa-pencil-alt"></i></button>
-                            <button class="btn btn-danger" type="button" style="margin: 2px;" data-target="#delete-confirm-modal" data-toggle="modal" name="delete" value="<?php echo $currency["id"]; ?>" onclick="button_click(this);"><i class="fas fa-trash"></i></button>
+                            <button class="btn btn-success action-btn-edit" type="button" data-toggle="modal" data-target="#currency-modal" name="edit" value="<?php echo $currency["id"]; ?>" onclick="edit_or_delete_btn(this, <?php echo htmlentities(json_encode($currency)); ?>);"><i class="fas fa-pencil-alt"></i></button>
+                            <button class="btn btn-danger" type="button" style="margin: 2px;" data-target="#delete-confirm-modal" data-toggle="modal" name="delete" value="<?php echo $currency["id"]; ?>" onclick="edit_or_delete_btn(this, <?php echo htmlentities(json_encode($currency)); ?>);"><i class="fas fa-trash"></i></button>
 
 							<?php
 							echo "</td></tr>";
@@ -101,11 +101,11 @@ if(!db()->tableExists("currency")){
             </div>
         </div>
     </div>
-    <div class="modal fade l" role="dialog" tabindex="-1" id="add-currency-modal">
+    <div role="dialog" tabindex="-1" class="modal fade" id="currency-modal">
         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
             <div class="modal-content" style="background-color: #1A1A1D;">
                 <div class="modal-header" style="background: #1a1a1d;border-color: #ffffff;">
-                    <h4 class="modal-title" style="color: rgb(255,255,255);">Add Currency</h4>
+                    <h4 class="modal-title" id="currency-modal-title" style="color: rgb(255,255,255);">_ Currency</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white;"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body border-0" style="background: #1a1a1d;">
@@ -113,102 +113,45 @@ if(!db()->tableExists("currency")){
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-prepend"><span class="text-dark input-group-text"><i class="fa fa-sitemap fa-fw"></i></span></div>
-                                <input class="form-control" type="text" placeholder="ID" required="" name="id">
+                                <input type="text" class="form-control" id="currency-modal-id" placeholder="ID" required name="id"/>
                                 <div class="input-group-append"></div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-prepend"><span class="text-dark input-group-text"><i class="fas fa-user fa-fw"></i></span></div>
-                                <input class="form-control" type="text" placeholder="Name" required="" name="name">
+                                <input type="text" class="form-control" id="currency-modal-name" placeholder="Name" required name="name"/>
                                 <div class="input-group-append"></div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-prepend"><span class="text-dark input-group-text"><i class="fas fa-user fa-fw"></i></span></div>
-                                <input class="form-control" type="text" placeholder="Symbol" required="" name="symbol">
+                                <input type="text" class="form-control" id="currency-modal-symbol" placeholder="Symbol" required name="symbol"/>
                                 <div class="input-group-append"></div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-prepend"><span class="text-dark input-group-text"><i class="fas fa-user fa-fw"></i></span></div>
-                                <input class="form-control" type="text" placeholder="Starting amount" required="" name="starting_amount" inputmode="numeric">
+                                <input type="text" class="form-control" id="currency-modal-st-amt" placeholder="Starting amount" required name="starting_amount" inputmode="numeric"/>
                                 <div class="input-group-append"></div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-prepend"><span class="text-dark input-group-text"><i class="fas fa-database fa-fw"></i></span></div>
-                                <input class="form-control" type="text" placeholder="Maximum amount" required="" name="maximum_amount" inputmode="numeric">
+                                <input type="text" class="form-control" id="currency-modal-max-amt" placeholder="Maximum amount" required name="maximum_amount" inputmode="numeric"/>
                                 <div class="input-group-append"></div>
                             </div>
                         </div>
-                        <div class="form-group"><select class="custom-select" name="symbol_position" required="">
-                                <option value="start" selected="">Start - Before currency</option>
-                                <option value="end">End - After currency</option>
-                            </select></div>
-                        <hr style="background: var(--light);">
-                        <div class="form-group text-right">
-                            <button class="btn btn-outline-dark btn-lg text-white" style="width: 100%;" type="submit" name="currency_add">Connect</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div role="dialog" tabindex="-1" class="modal fade l" id="edit-currency-modal">
-        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-            <div class="modal-content" style="background-color: #1A1A1D;">
-                <div class="modal-header" style="background: #1a1a1d;border-color: #ffffff;">
-                    <h4 class="modal-title" style="color: rgb(255,255,255);">Edit Currency</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white;"><span aria-hidden="true">×</span></button>
-                </div>
-                <div class="modal-body border-0" style="background: #1a1a1d;">
-                    <form method="POST" name="edit-currency" action="index.php">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend"><span class="text-dark input-group-text"><i class="fa fa-sitemap fa-fw"></i></span></div>
-                                <input type="text" class="form-control" placeholder="ID" required name="id"/>
-                                <div class="input-group-append"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend"><span class="text-dark input-group-text"><i class="fas fa-user fa-fw"></i></span></div>
-                                <input type="text" class="form-control" placeholder="Name" required name="name"/>
-                                <div class="input-group-append"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend"><span class="text-dark input-group-text"><i class="fas fa-user fa-fw"></i></span></div>
-                                <input type="text" class="form-control" placeholder="Symbol" required name="symbol"/>
-                                <div class="input-group-append"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend"><span class="text-dark input-group-text"><i class="fas fa-user fa-fw"></i></span></div>
-                                <input type="text" class="form-control" placeholder="Starting amount" required name="starting_amount" inputmode="numeric"/>
-                                <div class="input-group-append"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend"><span class="text-dark input-group-text"><i class="fas fa-database fa-fw"></i></span></div>
-                                <input type="text" class="form-control" placeholder="Maximum amount" required name="maximum_amount" inputmode="numeric"/>
-                                <div class="input-group-append"></div>
-                            </div>
-                        </div>
-                        <div class="form-group"><select class="custom-select" name="symbol_position" required>
+                        <div class="form-group"><select class="custom-select" id="currency-modal-symbol-pos" name="symbol_position" required>
                                 <option value="start" selected>Start - Before currency</option>
                                 <option value="end">End - After currency</option>
                             </select></div>
                         <hr style="background: var(--light);"/>
                         <div class="form-group text-right">
-                            <button class="btn btn-outline-dark btn-lg text-white" style="width: 100%;" type="submit" name="currency_edit">Connect</button>
+                            <button class="btn btn-outline-dark btn-lg text-white" style="width: 100%;" type="submit" name="currency_add">Connect</button>
                         </div>
                     </form>
                 </div>

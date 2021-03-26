@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feaf39ca-caf7-4e93-a0be-dea1a04f6d1c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Default_23_11_20_dup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Default_23_11_20_dup.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/classes/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/classes/DB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/functions/util_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/functions/util_functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/currency/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/currency/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,8 @@
       <workItem from="1616697248171" duration="12181000" />
       <workItem from="1616711862334" duration="507000" />
       <workItem from="1616712406395" duration="10000" />
-      <workItem from="1616712448732" duration="8866000" />
+      <workItem from="1616712448732" duration="9235000" />
+      <workItem from="1616745072649" duration="6076000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit&#10;far from complete...">
       <created>1616433486390</created>
@@ -135,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616712359419</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="currency now displays properly..">
+      <created>1616721729242</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1616721729242</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +162,7 @@
     <MESSAGE value="added comments" />
     <MESSAGE value="better error handling and start work on the backend for currency" />
     <MESSAGE value="committing before phpstorm crashes again" />
-    <option name="LAST_COMMIT_MESSAGE" value="committing before phpstorm crashes again" />
+    <MESSAGE value="currency now displays properly.." />
+    <option name="LAST_COMMIT_MESSAGE" value="currency now displays properly.." />
   </component>
 </project>

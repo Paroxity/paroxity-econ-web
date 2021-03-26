@@ -135,7 +135,7 @@
     <inspection_tool class="ES6ConvertModuleExportToExport" enabled="true" level="INFORMATION" enabled_by_default="true" />
     <inspection_tool class="ES6ConvertRequireIntoImport" enabled="true" level="INFORMATION" enabled_by_default="true" />
     <inspection_tool class="ES6ConvertToForOf" enabled="true" level="INFORMATION" enabled_by_default="true" />
-    <inspection_tool class="ES6ConvertVarToLetConst" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="ES6ConvertVarToLetConst" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="ES6DestructuringVariablesMerge" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="ES6MissingAwait" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="ES6PossiblyAsyncFunction" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
@@ -337,10 +337,10 @@
     <inspection_tool class="JSUnnecessarySemicolon" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="JSUnreachableSwitchBranches" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="JSUnresolvedExtXType" enabled="true" level="WARNING" enabled_by_default="true" />
-    <inspection_tool class="JSUnresolvedFunction" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="JSUnresolvedFunction" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="JSUnresolvedLibraryURL" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="JSUnresolvedReactComponent" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="JSUnresolvedVariable" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="JSUnresolvedVariable" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="JSUnusedAssignment" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="JSUnusedGlobalSymbols" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="JSUnusedLocalSymbols" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -809,9 +809,9 @@
     <inspection_tool class="TypeScriptSmartCast" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="TypeScriptSuspiciousConstructorParameterAssignment" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="TypeScriptUMDGlobal" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
-    <inspection_tool class="TypeScriptUnresolvedFunction" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="TypeScriptUnresolvedFunction" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="TypeScriptUnresolvedReactComponent" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="TypeScriptUnresolvedVariable" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="TypeScriptUnresolvedVariable" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="TypeScriptValidateGenericTypes" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="TypeScriptValidateJSTypes" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="TypeScriptValidateTypes" enabled="true" level="ERROR" enabled_by_default="true" />
