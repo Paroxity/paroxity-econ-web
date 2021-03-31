@@ -16,7 +16,7 @@ function isConnected(): bool{
 }
 
 // return the last known git commit hash or 0000000 in case of error
-function getGetHash(): string{
+function getGitHash(): string{
 	if(isset($_SESSION["git_hash"])){
 		return $_SESSION["git_hash"];
 	}

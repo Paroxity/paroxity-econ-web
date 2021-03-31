@@ -1,7 +1,7 @@
 <div id="footer" class="footer-basic">
     <footer>
         <p class="copyright">Paroxity © 2021</p>
-        <p class="git">Build: <a id="git-hash" class="git" href="https://github.com/Paroxity/paroxity-econ-web/commit/<?php echo getGetHash(); ?>" target="_blank"><?php echo getGetHash(); ?></a></p>
+        <p class="git">Build: <a id="git-hash" class="git" href="https://github.com/Paroxity/paroxity-econ-web/commit/<?php echo getGitHash(); ?>" target="_blank"><?php echo getGitHash(); ?></a></p>
     </footer>
 </div>
 

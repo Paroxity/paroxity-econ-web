@@ -7,4 +7,4 @@ if(!defined("APP_PATH")){
 // needs to be imported first since other classes use its functions
 include APP_PATH . "core/functions/util_functions.php";
 
-var_dump(getGetHash());
+var_dump(getGitHash());
