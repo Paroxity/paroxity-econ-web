@@ -16,10 +16,6 @@
 </body>
 </html>
 
-<?php
-_log(execGitCmd());
-?>
-
 <?php if(isConnected()): ?>
 
     <script>

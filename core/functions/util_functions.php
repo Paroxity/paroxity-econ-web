@@ -16,27 +16,20 @@ function isConnected(): bool{
 }
 
 // return the last known git commit hash or 0000000 in case of error
-function getGitHash(): string{
+function getGitHash(string $branch = "master"): string{
 	if(isset($_SESSION["git_hash"])){
 		return $_SESSION["git_hash"];
 	}
 
-	$ret = execGitCmd();
+	$hash = file_get_contents(sprintf(APP_PATH . ".git/refs/heads/%s", $branch));
 
-	if(!is_string($ret) || strlen(stripInput($ret)) > 7){
+	if(!$hash){
 		return str_repeat("0", 7);
 	}
 
-	$_SESSION["git_hash"] = stripInput($ret);
+	$_SESSION["git_hash"] = substr(stripInput($hash), 0, 7);
 
 	return $_SESSION["git_hash"];
-}
-
-/**
- * @return false|string|null
- */
-function execGitCmd(){
-	return shell_exec("git log --pretty=%h -n1 HEAD 2>&1");
 }
 
 // proceed to the home page of the website
