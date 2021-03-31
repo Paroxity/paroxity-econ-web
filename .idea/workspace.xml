@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feaf39ca-caf7-4e93-a0be-dea1a04f6d1c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/classes/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/classes/DB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/currency/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/currency/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +36,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../charcoal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -70,7 +68,10 @@
       <workItem from="1616711862334" duration="507000" />
       <workItem from="1616712406395" duration="10000" />
       <workItem from="1616712448732" duration="9235000" />
-      <workItem from="1616745072649" duration="18748000" />
+      <workItem from="1616745072649" duration="19486000" />
+      <workItem from="1617026408069" duration="40000" />
+      <workItem from="1617193901321" duration="408000" />
+      <workItem from="1617200139579" duration="30000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit&#10;far from complete...">
       <created>1616433486390</created>
@@ -170,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616765712485</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="currency can now be deleted, website complete (for now)">
+      <created>1616768341360</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1616768341360</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +201,7 @@
     <MESSAGE value="remove filters button isnt needed" />
     <MESSAGE value="currency editing now works flawlessly" />
     <MESSAGE value="currency can now be added" />
-    <option name="LAST_COMMIT_MESSAGE" value="currency can now be added" />
+    <MESSAGE value="currency can now be deleted, website complete (for now)" />
+    <option name="LAST_COMMIT_MESSAGE" value="currency can now be deleted, website complete (for now)" />
   </component>
 </project>
