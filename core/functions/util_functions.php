@@ -21,8 +21,7 @@ function getGitHash(): string{
 		return $_SESSION["git_hash"];
 	}
 
-	$ret = shell_exec("git log --pretty=%h -n1 HEAD 2>&1");
-	_log($ret);
+	$ret = execGitCmd();
 
 	if(!is_string($ret) || strlen(stripInput($ret)) > 7){
 		return str_repeat("0", 7);
@@ -31,6 +30,13 @@ function getGitHash(): string{
 	$_SESSION["git_hash"] = stripInput($ret);
 
 	return $_SESSION["git_hash"];
+}
+
+/**
+ * @return false|string|null
+ */
+function execGitCmd(){
+	return shell_exec("git log --pretty=%h -n1 HEAD 2>&1");
 }
 
 // proceed to the home page of the website
