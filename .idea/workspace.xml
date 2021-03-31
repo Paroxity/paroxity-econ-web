@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="feaf39ca-caf7-4e93-a0be-dea1a04f6d1c" name="Default Changelist" comment="">
+    <list default="true" id="feaf39ca-caf7-4e93-a0be-dea1a04f6d1c" name="Default Changelist" comment="[deploy] better way of finding commit hash">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/functions/util_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/functions/util_functions.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
       <workItem from="1616745072649" duration="19486000" />
       <workItem from="1617026408069" duration="40000" />
       <workItem from="1617193901321" duration="408000" />
-      <workItem from="1617200139579" duration="9006000" />
+      <workItem from="1617200139579" duration="9827000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit&#10;far from complete...">
       <created>1616433486390</created>
@@ -262,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617226694637</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="[deploy] better way of finding commit hash">
+      <created>1617227611220</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1617227611220</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +278,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixes" />
     <MESSAGE value="more fixes" />
     <MESSAGE value="cleanup, next up currency" />
     <MESSAGE value="added currency stuff, todo: backend" />
@@ -297,6 +302,7 @@
     <MESSAGE value="[deploy] fix typo" />
     <MESSAGE value="[deploy] log error to console" />
     <MESSAGE value="[deploy] testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="[deploy] testing" />
+    <MESSAGE value="[deploy] better way of finding commit hash" />
+    <option name="LAST_COMMIT_MESSAGE" value="[deploy] better way of finding commit hash" />
   </component>
 </project>
