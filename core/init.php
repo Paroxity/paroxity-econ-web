@@ -16,9 +16,10 @@ session_start();
 error_reporting(1);
 
 define("NAME", "ParoxityEcon");
-define("URI_NAME", "pecon");
+define("URI_NAME", ".");
 
-//define("DOMAIN", "http://6710eeb030f1.ngrok.io");
-define("DOMAIN", "http://localhost");
+define("DOMAIN", "https://econ.paroxity.net");
+//define("DOMAIN", "http://localhost");
 
-define("BASE_URL", DOMAIN . "/" . strtolower(URI_NAME) . "/");
+//define("BASE_URL", DOMAIN . "/" . strtolower(URI_NAME) . "/");
+define("BASE_URL", DOMAIN . "/");
