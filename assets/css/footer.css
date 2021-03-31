@@ -1,13 +1,19 @@
 .footer-basic {
-  padding: 40px 0px;
+  padding: 20px 0px;
   bottom: 0;
   background: rgb(26,26,29);
+  text-align: center;
+  font-size: 13px;
 }
 
 .footer-basic .copyright {
-  text-align: center;
-  font-size: 13px;
   color: #aaa;
   margin-bottom: 0px;
+}
+
+.footer-basic .git {
+  margin-bottom: 5px;
+  color: rgb(133,133,133);
+  font-size: 10px;
 }
 

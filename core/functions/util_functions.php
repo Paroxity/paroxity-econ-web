@@ -15,6 +15,23 @@ function isConnected(): bool{
 	return isset($_SESSION["connected"]);
 }
 
+// return the last known git commit hash or 0000000 in case of error
+function getGetHash(): string{
+	if(isset($_SESSION["git_hash"])){
+		return $_SESSION["git_hash"];
+	}
+
+	$ret = shell_exec("git log --pretty=%h -n1 HEAD 2>&1");
+
+	if(!is_string($ret) || strlen(stripInput($ret)) > 7){
+		return str_repeat("0", 7);
+	}
+
+	$_SESSION["git_hash"] = stripInput($ret);
+
+	return $_SESSION["git_hash"];
+}
+
 // proceed to the home page of the website
 function _home(): void{
 	header("Location: " . BASE_URL);
