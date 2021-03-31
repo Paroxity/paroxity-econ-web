@@ -75,7 +75,7 @@ function _disconnect(bool $destroySession = true): void{
 
 // To be used for paths that could be accessed via web
 function _resource(string $path): string{
-	return "/" . URI_NAME . "/" . $path;
+	return "/" . BASE_FOLDER . "/" . $path;
 }
 
 // returns the url to the desired path prefixed with the websites address
