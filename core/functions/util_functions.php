@@ -16,12 +16,12 @@ function isConnected(): bool{
 }
 
 // return the last known git commit hash or 0000000 in case of error
-function getGitHash(string $branch = "main"): string{
+function getGitHash(string $branch = "master"): string{
 	if(isset($_SESSION["git_hash"])){
 		return $_SESSION["git_hash"];
 	}
 
-	$hash = file_get_contents(sprintf(APP_PATH . ".git/refs/heads/%s", $branch));
+	$hash = file_get_contents(sprintf(APP_PATH . ".git/refs/remotes/origin/%s", $branch));
 
 	if(!$hash){
 		return str_repeat("0", 7);
