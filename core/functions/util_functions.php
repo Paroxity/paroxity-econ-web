@@ -22,6 +22,7 @@ function getGitHash(): string{
 	}
 
 	$ret = shell_exec("git log --pretty=%h -n1 HEAD 2>&1");
+	_log($ret);
 
 	if(!is_string($ret) || strlen(stripInput($ret)) > 7){
 		return str_repeat("0", 7);
