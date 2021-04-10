@@ -83,6 +83,8 @@ if(isset($_POST["submit"])){
     <link rel="stylesheet" href="<?php echo _resource("assets/css/styles.css"); ?>">
     <link rel="stylesheet" href="<?php echo _resource("assets/css/table-custom.css"); ?>">
     <link rel="stylesheet" href="<?php echo _resource("assets/css/extras.css"); ?>">
+
+    <link rel="shortcut icon" type="image/png" href="<?php echo _resource("assets/img/paroxity_icon.png"); ?>">
 </head>
 
 <body>
