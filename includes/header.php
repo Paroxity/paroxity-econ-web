@@ -39,12 +39,33 @@ if(isset($_POST["submit"])){
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title><?php echo NAME; ?></title>
+
+    <title><?php echo NAME . " - " . ORG; ?></title>
+    <meta name="description" content="An asynchronous multi-currency economy plugin for PocketMine-MP servers. First of its kind, designed for server networks and the likes.">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="ParoxityEcon - Paroxity">
+    <meta itemprop="description" content="An asynchronous multi-currency economy plugin for PocketMine-MP servers. First of its kind, designed for server networks and the likes.">
+    <meta itemprop="image" content="https://tayyab.dev/wp-content/uploads/2020/04/econ-1.png">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://econ.paroxity.net">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ParoxityEcon - Paroxity">
+    <meta property="og:description" content="An asynchronous multi-currency economy plugin for PocketMine-MP servers. First of its kind, designed for server networks and the likes.">
+    <meta property="og:image" content="https://tayyab.dev/wp-content/uploads/2020/04/econ-1.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ParoxityEcon - Paroxity">
+    <meta name="twitter:description" content="An asynchronous multi-currency economy plugin for PocketMine-MP servers. First of its kind, designed for server networks and the likes.">
+    <meta name="twitter:image" content="https://tayyab.dev/wp-content/uploads/2020/04/econ-1.png">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">

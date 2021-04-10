@@ -19,6 +19,7 @@ session_start();
 error_reporting(1);
 
 define("NAME", "ParoxityEcon");
+define("ORG", "Paroxity");
 
 // BASE_FOLDER: the name of the folder the website is in, set to . if none
 // DOMAIN: pretty self explanatory, the web address to this website
