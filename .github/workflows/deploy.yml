@@ -23,4 +23,4 @@ jobs:
         KEY: ${{ secrets.SSHKEY }}
       with:
         source: "."
-        target: "/www/wwwroot/econ.paroxity.net"
+        target: ${{ secrets.TARGET }}
